@@ -1,0 +1,4 @@
+{
+  "dbt.flag.defer": true,
+  "dbt.flag.state": "target/compare_state"
+}

@@ -1,0 +1,10 @@
+.env
+.DS_Store
+.venv/
+.user.yml
+logs/
+**/target/
+**/dbt_packages/
+**/dbt_internal_packages/
+**/*.duckdb
+**/*.duckdb.wal

@@ -1,0 +1,16 @@
+# Local DuckDB profile — no warehouse credentials required.
+# Works the same on macOS, Linux, and Windows.
+# Run with: dbt build --profiles-dir .
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "./jaffle_shop.duckdb"
+      schema: main
+      threads: 4
+    compare_baseline:
+      type: duckdb
+      path: "./jaffle_shop.duckdb"
+      schema: compare_baseline
+      threads: 4

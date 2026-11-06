@@ -1,0 +1,26 @@
+{
+  "name": "dnb-dbt-v2-workshop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {},
+  "postCreateCommand": "chmod +x scripts/*.sh scripts/lib/*.sh && ./scripts/setup.sh --install",
+  "postStartCommand": "test -x \"$HOME/.local/bin/dbt\" && echo \"dbt: $(\"$HOME/.local/bin/dbt\" --version)\" || true",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbtLabsInc.dbt"
+      ],
+      "settings": {
+        "dbt.dbtPath": "/home/vscode/.local/bin/dbt"
+      }
+    }
+  },
+  "remoteEnv": {
+    "DBT_PROFILES_DIR": "${containerWorkspaceFolder}",
+    "PATH": "/home/vscode/.local/bin:${containerEnv:PATH}"
+  },
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "8gb"
+  }
+}

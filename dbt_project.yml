@@ -1,0 +1,30 @@
+name: jaffle_shop
+
+profile: jaffle_shop
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+# The VS Code Compare feature runs dbt-compare macros. Search this project first
+# so macros/duckdb__quick_are_queries_identical.sql fills the DuckDB gap.
+dispatch:
+  - macro_namespace: dbt_compare_macros
+    search_order: ["jaffle_shop", "dbt_compare_macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  # Builds seeds into '<your_schema_name>_raw'
+  jaffle_shop:
+    +schema: raw
+
+models:
+  jaffle_shop:
+    +static_analysis: strict
+    # Materialize staging models as views, and marts as tables
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
