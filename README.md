@@ -29,7 +29,7 @@ From that same folder:
 dbtf build
 ```
 
-Reload VS Code. Confirm the status bar shows **dbt Extension**. Follow [Quickstart for dbt v2](https://docs.getdbt.com/guides/dbt.md) from **Explore with the dbt VS Code extension**. Do not run `dbt init`. Use `dbtf` for the commands in that guide. `dbt_project.yml` is in the repository root.
+Reload VS Code. Confirm the status bar shows **dbt Extension**. Follow [Quickstart for dbt v2]([https://docs.getdbt.com/guides/dbt.md](https://docs.getdbt.com/guides/dbt?step=5)) from **Explore with the dbt VS Code extension**. Do not run `dbt init`. Use `dbtf` for the commands in that guide. `dbt_project.yml` is in the repository root.
 
 ## GitHub Codespaces
 
