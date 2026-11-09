@@ -39,7 +39,7 @@ Reload VS Code. Confirm the status bar shows **dbt Extension**. Follow [Quicksta
 
 The Codespace runs `./scripts/setup.sh --install` for you. That installs dbt Fusion and runs `dbtf build` in the repository root. It also installs the **dbt** extension from **dbt Labs, LLC**. The extension is required. Confirm the status bar shows **dbt Extension**.
 
-4. From the repository root, `dbtf build` should show **48 success**. Follow [Quickstart for dbt v2](https://docs.getdbt.com/guides/dbt.md) from **Explore with the dbt VS Code extension**. Do not run `dbt init`. Use `dbtf` for the commands in that guide.
+4. From the repository root, `dbtf build` should show **48 success**. Follow [Quickstart for dbt v2](https://docs.getdbt.com/guides/dbt?step=5) from **Explore with the dbt VS Code extension**. Do not run `dbt init`. Use `dbtf` for the commands in that guide.
 
 ## Download ZIP (no Git)
 
